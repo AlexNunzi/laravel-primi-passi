@@ -7,6 +7,6 @@
     <title>Hello Laravel!</title>
 </head>
 <body>
-    <p>Hello World!</p>
+    <p> {{$hello}} </p>
 </body>
 </html>
