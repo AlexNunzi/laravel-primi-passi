@@ -20,4 +20,23 @@ Route::get('/', function () {
     $data = ['hello' => $hello];
 
     return view('home', $data);
-});
+})->name('mainPage');
+
+Route::get('bonus', function() {
+    $bonus = 'This is a bonus page!';
+
+    $data = ['bonus' => $bonus];
+
+    return view('bonus', $data);
+})->name('bonusPage');
+
+Route::get('extra', function() {
+    $extra = 'This is an extra page!';
+
+    $data = [
+        'extra' => $extra,
+        'listDummies' => ['uno', 'due', 'tre', 'quatro']
+    ];
+
+    return view('extra', $data);
+})->name('extraPage');
